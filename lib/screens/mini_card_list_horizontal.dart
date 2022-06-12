@@ -14,17 +14,17 @@ class _MiniCardListState extends State<MiniCardList> {
     return SizedBox(
       height: 75,
       width: 450,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ListView(
-          scrollDirection: Axis.horizontal,
-          children: const [
-            SizedBox(
-              width: 10,
-            ),
-            MiniCardListHorizontal(),
-          ],
-        ),
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: const [
+          SizedBox(
+            width: 10,
+          ),
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: MiniCardListHorizontal(),
+          ),
+        ],
       ),
     );
   }

@@ -18,11 +18,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: HomeScreen());
+        debugShowCheckedModeBanner: false, home: HomeScreen());
   }
 }
-
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -35,11 +33,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   late TabController tabBarViewController;
 
   int currentIndex = 0;
-
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +52,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
                 //приветствие по имени
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,9 +67,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 35,
-                ),
+                const SizedBox(height: 35),
 
                 //Тотал баланс
                 Column(
@@ -94,9 +84,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 15,
-                ),
+                const SizedBox(height: 15),
               ],
             ),
           ),
@@ -106,9 +94,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
           //горизонтальные акции
           const StocksScreen(),
-          const SizedBox(
-            height: 10,
-          ),
+          const SizedBox(height: 10),
 
           //Две какие то кнопки
           SizedBox(
@@ -142,46 +128,60 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
           ),
 
-
-
           // Текст заголовка нижнего списка транзакции
-          Padding(padding: const EdgeInsets.only(right: 20, left: 20, top: 20, bottom: 5),
+          Padding(
+            padding:
+                const EdgeInsets.only(right: 20, left: 20, top: 20, bottom: 5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                Text('Transactions', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                Text('See all >', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),)
+                Text(
+                  'Transactions',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'See all >',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.blue),
+                )
               ],
             ),
           ),
 
-
           //вертикальный список транзакции
           const GlobalTransactionsScreen(),
-
-
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home,),
+            icon: Icon(
+              Icons.home,
+            ),
             label: 'Main',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.streetview_outlined,),
+            icon: Icon(
+              Icons.streetview_outlined,
+            ),
             label: 'Trade',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.add_circle, ),
+            icon: Icon(
+              Icons.add_circle,
+            ),
             label: 'Pay',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.access_time, ),
+            icon: Icon(
+              Icons.access_time,
+            ),
             label: 'History',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person,),
+            icon: Icon(
+              Icons.person,
+            ),
             label: 'Account',
           ),
         ],

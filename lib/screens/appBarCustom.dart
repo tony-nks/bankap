@@ -98,4 +98,20 @@ class _AppBarCustomState extends State<AppBarCustom> {
       ),
     );
   }
+  void showTransactionsSheet(BuildContext context) {
+    showModalBottomSheet(
+      isScrollControlled: true,
+      elevation: 5,
+      backgroundColor: Colors.white,
+      context: context,
+      builder: (context) => Container(
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
+        child: const FractionallySizedBox(
+          heightFactor: 0.9,
+          child: TransactionSheetScreen(),
+        ),
+      ),
+    );
+  }
+
 }

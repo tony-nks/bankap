@@ -10,16 +10,13 @@ class GlobalTransactionsScreen extends StatelessWidget {
     return Expanded(
       child: SizedBox(
         width: 450,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15),
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: const [
-              GlobalTransInMain(icon: Icon(Icons.airplanemode_on, color: Colors.white,), cardName: 'Sber Bank', transName: 'AirLine Ticket', sum: 1000),
-              GlobalTransInMain(icon: Icon(Icons.car_rental, color: Colors.white), cardName: 'Alpha Bank', transName: 'Car Rental', sum: 200),
-              GlobalTransInMain(icon: Icon(Icons.directions_bus, color: Colors.white), cardName: 'Alpha Bank', transName: 'Bus Ticket', sum: 200),
-              ],
-          ),
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: const [
+            GlobalTransInMain(icon: Icon(Icons.airplanemode_on, color: Colors.white,), cardName: 'Sber Bank', transName: 'AirLine Ticket', sum: 1000),
+            GlobalTransInMain(icon: Icon(Icons.car_rental, color: Colors.white), cardName: 'Alpha Bank', transName: 'Car Rental', sum: 200),
+            GlobalTransInMain(icon: Icon(Icons.directions_bus, color: Colors.white), cardName: 'Alpha Bank', transName: 'Bus Ticket', sum: 200),
+            ],
         ),
       ),
     );
