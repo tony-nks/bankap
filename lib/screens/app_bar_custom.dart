@@ -1,9 +1,6 @@
 import 'package:drawer/screens/transaction_sheet.dart';
 import 'package:flutter/material.dart';
 
-
-
-
 class AppBarCustom extends StatefulWidget {
   const AppBarCustom({Key? key}) : super(key: key);
 
@@ -23,7 +20,6 @@ class _AppBarCustomState extends State<AppBarCustom> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-
                 // дата
                 Row(
                   children: [
@@ -35,13 +31,11 @@ class _AppBarCustomState extends State<AppBarCustom> {
                       children: const [
                         Text(
                           'THURSDAY',
-                          style:
-                          TextStyle(fontSize: 12, color: Colors.grey),
+                          style: TextStyle(fontSize: 12, color: Colors.grey),
                         ),
                         Text(
                           '4 SEPTEMBER',
-                          style:
-                          TextStyle(fontSize: 12, color: Colors.grey),
+                          style: TextStyle(fontSize: 12, color: Colors.grey),
                         ),
                       ],
                     ),
@@ -98,6 +92,7 @@ class _AppBarCustomState extends State<AppBarCustom> {
       ),
     );
   }
+
   void showTransactionsSheet(BuildContext context) {
     showModalBottomSheet(
       isScrollControlled: true,
@@ -113,5 +108,4 @@ class _AppBarCustomState extends State<AppBarCustom> {
       ),
     );
   }
-
 }

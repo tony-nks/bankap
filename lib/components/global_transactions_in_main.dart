@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class GlobalTransInMain extends StatelessWidget {
   final String transName;
-  final cardName;
+  final String cardName;
   final int sum;
+  // ignore: prefer_typing_uninitialized_variables
   final icon;
   const GlobalTransInMain({Key? key,
     required this.icon,

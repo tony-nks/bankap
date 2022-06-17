@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 class Transaction extends StatelessWidget {
-  final icon;
+  final IconData icon;
   final String transactionName;
   final String cartName;
   final String sum;
